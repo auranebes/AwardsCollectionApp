@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct ShapeView: View {
-    @State var colors: [Colored] =
+    @State var colors: [AdditionalColors] =
     [
-        Colored(hexValue: "#15654B", color: Color("Green")),
-        Colored(hexValue: "#DAA4FF", color: Color("Violet")),
-        Colored(hexValue: "#FFD90A", color: Color("Yellow")),
-        Colored(hexValue: "#FE9EC4", color: Color("Pink")),
-        Colored(hexValue: "#FB3272", color: Color("Orange")),
-        Colored(hexValue: "#4460EE", color: Color("Blue"))
+        AdditionalColors(hexValue: "#15654B", color: Color("Green")),
+        AdditionalColors(hexValue: "#DAA4FF", color: Color("Violet")),
+        AdditionalColors(hexValue: "#FFD90A", color: Color("Yellow")),
+        AdditionalColors(hexValue: "#FE9EC4", color: Color("Pink")),
+        AdditionalColors(hexValue: "#FB3272", color: Color("Orange")),
+        AdditionalColors(hexValue: "#4460EE", color: Color("Blue"))
     ]
     @State var selectedColor: Color = Color("Blue")
     @State var animations: [Bool] = Array(repeating: false, count: 10)
@@ -129,7 +129,7 @@ extension ShapeView{
     }
     
     @ViewBuilder
-    private func getPicker(colorBox: Colored)->some View{
+    private func getPicker(colorBox: AdditionalColors)->some View{
         VStack{
         if colorBox.addToGrid{
                 RoundedRectangle(cornerRadius: 10)

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Colored: Identifiable{
+struct AdditionalColors: Identifiable{
     var id = UUID().uuidString
     var hexValue: String
     var color: Color
